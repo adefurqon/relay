@@ -4,7 +4,7 @@ import os
 import pickle
 import struct
 
-HOST = '0.0.0.0'
+HOST = '192.168.1.131'
 PORT = int(os.environ.get('PORT', 65432)) 
 
 # Dictionary to store connected sessions
@@ -74,4 +74,5 @@ def start_relay_server():
             threading.Thread(target=handle_session, args=(conn, addr)).start()
 
 if __name__ == "__main__":
+
     start_relay_server()
